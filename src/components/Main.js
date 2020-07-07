@@ -6,9 +6,11 @@ import Home from './LoadableDashboard'
 import { Router,Route ,Link} from 'react-router-dom';
 import { syncHistoryWithStore } from 'react-router-redux'
 import { createBrowserHistory } from 'history';
+
 const browserHistory = createBrowserHistory();
 const history = syncHistoryWithStore(browserHistory, store)
 class AppComponent extends React.Component {
+  
   render() {
     return (
       <Provider store={store}>
@@ -19,11 +21,11 @@ class AppComponent extends React.Component {
         <ul>
           <li><Link to='/home'>Home</Link></li>
           <li><Link to='/'>About</Link></li>
+          <li><Link to='/demon'>demon</Link></li>
         </ul>
       </div>
-
           </Route>
-          <Route  path="/home"   > <Home></Home></Route>
+          <Home></Home>
         </Router>
       </Provider>
     );

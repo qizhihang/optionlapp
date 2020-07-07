@@ -1,8 +1,12 @@
-export const routers = [
+export  const routers = [
     {
         name: 'Home',
-        path: 'pages/Home.js',
-        url: '/'
+        path: 'Home.js',
+        url: '/home'
 
+    },{
+        name: 'Demon',
+        path: 'Demon.js',
+        url: '/demon'
     }
 ]
